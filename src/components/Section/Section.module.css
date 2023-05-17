@@ -1,0 +1,15 @@
+.section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+}
+
+.box {
+    justify-content: center;
+    display: flex;
+    padding: 32px;
+    background-color: blanchedalmond;
+    gap: 24px;
+}
