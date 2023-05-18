@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "./Button/Button";
 import { Section } from "./Section/Section";
 import { Statistics } from "./Statistics/Statistics";
+import { FeedbackOptions } from "./Feedback/Feedback";
 
 const feedbackArray = ["good", "neutral", "bad"];
 
@@ -13,7 +13,7 @@ export class App extends React.Component {
     total: 0,
     percent: 0
       }
-  onClick = (evt) => {
+  onLeaveFeedback = (evt) => {
     this.setState({
       [evt.target.id]: this.state[evt.target.id] + 1
     });
@@ -34,12 +34,14 @@ export class App extends React.Component {
 
         <Section title="Please leave your feedback">
 
-          {feedbackArray.map(el => (<Button feed={el} key={el} onClick={ this.onClick} />))}
+          <FeedbackOptions options={feedbackArray} hendleClick={this.onLeaveFeedback}></FeedbackOptions>
           
         </Section>
 
         <Section title="Statistic">
+
           <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.percent}></Statistics>
+
          </Section>
 
       </div>
