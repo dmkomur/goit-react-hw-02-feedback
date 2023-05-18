@@ -1,0 +1,22 @@
+.textFeed {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  color: darkslateblue;
+  margin-right: 16px;
+}
+
+.textDigit {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(204, 111, 5);
+}
+
+.wrap {
+  justify-content: center;
+  display: flex;
+  padding: 32px;
+  background-color: rgb(198, 214, 224);
+  gap: 16px;
+}

@@ -73,18 +73,3 @@ img {
   margin: 0 auto;
   background-color: cornsilk;
 }
-
-.textFeed {
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 500;
-  color: darkslateblue;
-  margin-right: 16px;
-}
-
-.textDigit {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  color: darkcyan;
-}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./Button/Button";
 import { Section } from "./Section/Section";
+import { Statistics } from "./Statistics/Statistics";
 
 const feedbackArray = ["good", "neutral", "bad"];
 
@@ -38,12 +39,8 @@ export class App extends React.Component {
         </Section>
 
         <Section title="Statistic">
-          <p className="textFeed">Good  <span className="textDigit">{this.state.good}</span></p>
-          <p className="textFeed">Neutral  <span className="textDigit">{this.state.neutral}</span></p>
-          <p className="textFeed">Bad  <span className="textDigit">{this.state.bad}</span></p>
-          <p className="textFeed">Total  <span className="textDigit">{this.state.total}</span></p>
-          <p className="textFeed">Percent  <span className="textDigit">{this.state.percent}</span></p>
-        </Section>
+          <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.percent}></Statistics>
+         </Section>
 
       </div>
   )
