@@ -27,7 +27,7 @@ export class App extends React.Component {
     return ((this.state.good / this.countTotalFeedback()) * 100).toFixed(2);
   };
 
-  render = () => {
+  render() {
     return (
       <div className="container">
         <Section title="Please leave your feedback">
@@ -54,5 +54,5 @@ export class App extends React.Component {
         )}
       </div>
     );
-  };
+  }
 }
