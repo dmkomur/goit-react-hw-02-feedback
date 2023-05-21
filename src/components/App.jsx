@@ -36,12 +36,7 @@ export class App extends React.Component {
             hendleClick={this.onLeaveFeedback}
           ></FeedbackOptions>
         </Section>
-
-        {!this.countTotalFeedback() && (
-          <Notification message="There is no feedback"></Notification>
-        )}
-
-        {this.countTotalFeedback() > 0 && (
+        {this.countTotalFeedback() > 0 ? (
           <Section title="Statistic">
             <Statistics
               good={this.state.good}
@@ -51,6 +46,8 @@ export class App extends React.Component {
               positivePercentage={this.countPositiveFeedbackPercentage()}
             ></Statistics>
           </Section>
+        ) : (
+          <Notification message="There is no feedback"></Notification>
         )}
       </div>
     );
